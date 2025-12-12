@@ -1,58 +1,54 @@
-<html>
-<head>
-<title>Color Change</title>
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <title></title> 
+  <style type="text/css" media="all">
 
-<script>
-function change() {
-    document.bgColor = "green";
-    setTimeout(change1, 1000);
+div{
+    width: 100px;
+    height: 120px;
+    border: 1px solid black;
+    font-size: 105px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    left: 200px;
+    top: 10px;
+
 }
+#back{
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(red,blue);
+    position: absolute;
+    top: 0;
+    left: 210px;
+    z-index: -1;
+    animation: text 4s infinite;
 
-function change1() {
-    document.bgColor = "red";
-    setTimeout(change2, 1000);
 }
-
-function change2() {
-    document.bgColor = "orange";
-    setTimeout(change3, 1000);
+@keyframes text{
+    0%{position: absolute;top: 0px;}
+    100%{position: absolute; top: 800px;}
 }
-
-function change3() {
-    document.bgColor = "pink";
-    setTimeout(change4, 1000);
-}
-
-function change4() {
-    document.bgColor = "yellow";
-    setTimeout(change5, 1000);
-}
-
-function change5() {
-    document.bgColor = "blue";
-    setTimeout(change6, 1000);
-}
-
-function change6() {
-    document.bgColor = "black";
-    setTimeout(msg, 1000);
-}
-
-function msg() {
-    alert("Seven colors completed!");
-}
-</script>
-
-</head>
-
-<body>
-
-<input type="button" value="See color change" 
-onmousedown="window.setTimeout(change, 1000)">
-
-<br><br>
-
-<input type="button" value="Click Me" onclick="msg()">
-
-</body>
+    </style> 
+ </head> 
+ <body bgcolor="black"> 
+  <div id="back"></div> 
+  <div class="div1">
+    L 
+  </div> 
+  <div class="div2">
+    A 
+  </div> 
+  <div class="div3">
+    X 
+  </div> 
+  <div class="div4">
+    U 
+  </div> 
+  <div class="div5">
+    👋 
+  </div> 
+ </body>
 </html>
