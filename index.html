@@ -1,54 +1,33 @@
-<!doctype html>
-<html lang="en"> 
- <head> 
-  <title> glowing name..</title> 
-  <style type="text/css" media="all">
+<html>
+<head>
+<title>SOP-3 (Advanced Javascript) Count vowels</title>
 
-div{
-    width: 100px;
-    height: 120px;
-    border: 1px solid black;
-    font-size: 105px;
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    left: 200px;
-    top: 10px;
+<script language="javascript">
+function count()
+{
+    var ch, count = 0;
+    var str = f1.t1.value;
 
-}
-#back{
-    width: 100px;
-    height: 120px;
-    background: linear-gradient(red,blue);
-    position: absolute;
-    top: 0;
-    left: 210px;
-    z-index: -1;
-    animation: text 4s infinite;
+    for(i = 0; i < str.length; i++)
+    {
+        ch = str.charAt(i);
 
+        if(ch=='A' || ch=='a' || ch=='E' || ch=='e' ||
+           ch=='I' || ch=='i' || ch=='O' || ch=='o' ||
+           ch=='U' || ch=='u')
+        {
+            count++;
+        }
+    }
+    alert("Number of vowels are " + count);
 }
-@keyframes text{
-    0%{position: absolute;top: 0px;}
-    100%{position: absolute; top: 800px;}
-}
-    </style> 
- </head> 
- <body bgcolor="black"> 
-  <div id="back"></div> 
-  <div class="div1">
-    L 
-  </div> 
-  <div class="div2">
-    A 
-  </div> 
-  <div class="div3">
-    X 
-  </div> 
-  <div class="div4">
-    U 
-  </div> 
-  <div class="div5">
-    👋 
-  </div> 
- </body>
+</script>
+</head>
+
+<body>
+<form name="f1">
+    <input type="text" name="t1">
+    <input type="submit" value="Count Vowels" onclick="count()">
+</form>
+</body>
 </html>
